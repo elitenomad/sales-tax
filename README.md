@@ -93,6 +93,7 @@ Note: Ensure latest ruby is installed on the system.
 1. Unzip the sales-tax.zip
 2. cd sales-tax
 3. Run simulator with filename as argument.
+4. `chmod ugo+x exe/simulator` (not required, in case its not recognised as a script)
 
 ```
 ./exe/simulator ./data/receipt-1.txt
