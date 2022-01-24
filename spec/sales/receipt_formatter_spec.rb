@@ -10,7 +10,7 @@ module Sales
         let(:products) { Sales::Tax::CLI.new.load(file) }
         let!(:receipt) { Sales::Tax::Receipt.new(products) }
 
-        it "is expected to return right total price" do
+        it "is expected to return output with each product price, total price and sales taxes" do
             expect(subject.format(receipt)).to eq(
                 "1 book: 12.49 \n" +
                 "1 music cd: 16.49 \n" +

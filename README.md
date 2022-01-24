@@ -37,10 +37,10 @@ Given a receipt with details, print correct price per product, total price and s
 
 ## Development or Installation
 
-Unzip the sales-tax.zip into your local folder (OR)
-Git clone using: git@github.com:elitenomad/sales-tax.git
+Download the sales-tax.zip into your local folder (OR)
 
 ```
+git clone git@github.com:elitenomad/sales-tax.git
 cd sales-tax
 bundle install
 
@@ -65,7 +65,7 @@ bin/setup
 ├── bin
 │   ├── console
 │   └── setup
-├── data   => Directory where the input is loaded from
+├── data   => Directory where the input files are placed
 │   ├── receipt-1.txt
 │   ├── receipt-2.txt
 │   └── receipt-3.txt
@@ -116,7 +116,7 @@ rake spec
 
 Flow of control:
 
- => Simulator (with file as an argument)
+ => Simulator (is called with file as an argument)
      => Sales::Tax::CLI
         => Sales::Tax::BuildProduct
             => Sales::Tax::Product

@@ -10,7 +10,7 @@ module Sales
         let(:products) { Sales::Tax::CLI.new.load(file) }
         let!(:receipt) { subject.new(products) }
 
-        it "is expected to return right total price" do
+        it "is expected to return total price and tax in an array" do
             expect(receipt.generate_report).to eq([29.83, 1.5])
         end
       end
