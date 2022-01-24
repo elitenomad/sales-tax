@@ -145,6 +145,7 @@ Flow of control:
 
 - There is a scope to improve fetching of Exemption List logic based on a config file. Makes it more flexible than a simple array
 - Display format is basic. We can use libraries to show it in more readable format. We can add a flexibility of choosing multiple formatters by providing options from command line.
+- Rubocop script is manually run, could be automated onto git lifecycle hooks to run before we commit the code.
 
 
 ## Local terminal output
