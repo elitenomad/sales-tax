@@ -116,6 +116,7 @@ rake spec
 
 Flow of control:
 
+```
  => Simulator (is called with file as an argument)
      => Sales::Tax::CLI
         => Sales::Tax::BuildProduct
@@ -125,7 +126,7 @@ Flow of control:
             => Sales::Tax::Product
                 => Sales::Tax::Calculate
         => Sales::Tax:ReceiptFormatter
-
+```
 
 `Sales::Tax::CLI` class loads input data file and passes the products to `Sales::Tax::Receipt` class which inturn generates the report and `Sales::Tax:ReceiptFormattr` displays it on the console.
 
