@@ -11,8 +11,8 @@ module Sales
             name: entry.name,
             quantity: entry.quantity,
             price: entry.price,
-            is_imported: entry.is_imported?,
-            is_exempted: entry.is_exempted?
+            is_imported: entry.imported?,
+            is_exempted: entry.exempted?
           )
         end
       end
@@ -35,11 +35,11 @@ module Sales
         @attrs[2].to_f
       end
 
-      def is_imported?
+      def imported?
         name.include? "imported"
       end
 
-      def is_exempted?
+      def exempted?
         exempted_items = %w[book chocolate pills food medicine]
         exempted_items.any? { |item| @attrs[1].include?(item) }
       end

@@ -1,6 +1,16 @@
+AllCops:
+  SuggestExtensions: false
+  Exclude:
+    - "*.gemspec"
+    - "*.md"
+    - "spec/**/*"
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+
+Style/FormatStringToken:
+  Enabled: false
 
 Style/StringLiteralsInInterpolation:
   Enabled: true
@@ -8,3 +18,6 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Style/Documentation:
+  Enabled: false

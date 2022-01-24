@@ -18,7 +18,8 @@ module Sales
       end
 
       def run(products)
-        raise Sales::Tax::EmptyReceiptError, 'Receipt is empty' if products.size <= 0
+        raise Sales::Tax::EmptyReceiptError, "Receipt is empty" if products.size <= 0
+
         @receipt = Sales::Tax::Receipt.new(products)
         @result = Sales::Tax::ReceiptFormatter.format(@receipt)
 

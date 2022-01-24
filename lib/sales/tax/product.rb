@@ -14,7 +14,7 @@ module Sales
       end
 
       def derive_tax
-        @taxes ||= Sales::Tax::Calculate.tax(
+        Sales::Tax::Calculate.tax(
           price: @price,
           quantity: @quantity,
           is_imported: @is_imported,
